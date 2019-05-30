@@ -1,0 +1,39 @@
+= Alda's Dynamic Relationship With Clojure
+Dave Yarwood <dave.yarwood@gmail.com>
+:source-highlighter: rouge
+
+== TODO
+
+* Look into `slidy` as a way to generate an HTML slideshow from AsciiDoc
+  documents.
+** http://www.w3.org/Talks/Tools/Slidy2/
+** http://asciidoc.org/slidy.html
+
+== Scratchpad
+
+* Hello, Strange Loop! I'm here to tell you a story of love, marriage, and
+  divorce. Not of people, but of programming languages.
+** One of them is my brain-child, Alda.
+** Alda is a music composition programming language, born in Durham.
+** The other one is Clojure, a JVM Lisp, born in New York.
+
+* In order to tell this story, I also need to tell you a little bit about my own
+  progression as a software developer.
+** Segue into background that led to me initially toying with writing Alda in
+Python, then Ruby, finally settling on Clojure.
+** Started working at Adzerk not long after switching to Clojure, received
+input and development from my coworkers.
+
+* Now before we get much further, I'd like to give you a quick demo of Alda,
+  because I think that most of you probably aren't familiar with Alda, and you
+  might want to know the characters in this story a little better.
+** Demo of features using Alda v1.x
+*** Don't necessarily need to tell the audience that this is an older version of
+Alda right off the bat. The basic features of Alda should be consistent from v1
+to v2. Including attributes, which I don't need to explain right away are
+actually Lisp S-expressions.
+*** Then demonstrate the inline Clojure code feature of Alda v1. Say something
+to the effect of "I should mention that I'm using Alda v1.whatever here.
+There's a good reason for that. It's because I want to show you this feature
+that Alda used to have prior to version 2..."
+
