@@ -1,62 +1,141 @@
 = Alda's Dynamic Relationship With Clojure
 Dave Yarwood <dave.yarwood@gmail.com>
 :source-highlighter: rouge
+:toc: right
 
-== TODO
-
-* Look into `slidy` as a way to generate an HTML slideshow from AsciiDoc
-  documents.
-** http://www.w3.org/Talks/Tools/Slidy2/
-** http://asciidoc.org/slidy.html
-
-== Tentative outline
+== Outline
 
 === Introduction
 
-_2 minutes_
+NOTE: 2 minutes (**FIXME: revise time estimates**)
 
-* This talk is about Alda, a music composition programming language that I
-  started to work on in 2012.
-* Little bit about me...
-* I've given a few talks in the past where I introduced Alda and talked about
-  the features of the language and how I use it to compose music.
-* I will try to cover a little bit of that today in the fastest way possible,
-  but for this talk, I'd like to focus more on the history of Alda and its
-  interesting relationship with Clojure.
-* If you're curious to hear more about the syntax and features of Alda, I would
-  encourage you to watch my previous talks, and also check out the Alda website,
-  which has links to documentation and a tutorial.
+* Hello, Strange Loop! I'm here to tell you a story of love, marriage, and
+  divorce. Not of people, but of programming languages.
+** One of them is my brain-child, a music composition language called Alda, born
+in Durham.
+** The other language is Clojure, a JVM Lisp, born in New York.
 
-=== Agenda
+* In order to tell this story, I also need to tell you a little bit about myself
+  and my journey as a software developer.
+** We'll start in the present day, and then we'll time travel a little bit and
+I'll tell you about where Alda came from and how it came to be what it is today.
+** Then we'll jump ahead and look into the future.
 
-_1 minute_
+==== Present day
 
-* Cover the items below and hint that I will be making a shocking announcement
-  (I plan to reimplement Alda using Go and Kotlin)
+* I'm Dave Yarwood, I'm a software engineer at Adzerk.
+** We're the leading solution for developers who want to build their own
+fully-customized ad serving platform from scratch in a matter of weeks.
+*** _[insert other marketing jargon here, as suggested by Chris]_
+** Adzerk is my first programming job. I've been there for almost 5 years now,
+and I absolutely love it. The language that we use the most at Adzerk is
+Clojure. I'm a big fan of Clojure, and that's a major reason why I ended up
+working at Adzerk.
 
-=== Quick demo: Alda
+* In 2012, I started to design and begin to implement a music composition
+  programming language called Alda.
 
-_5 minutes_
+* Before we get much further, I'm going to give you a quick demo of Alda.
+  I think that most of you probably are not familiar with Alda, unless you were
+  at Strange Loop during the past couple years, where you may have seen me give
+  a lightning talk with a live demonstration, like I'm about to do here.
+** I've given a few talks in the past where I introduced Alda and I talked about
+the features of the language and how I use it to compose music.
+** I will try to cover a little bit of that today in the fastest way possible,
+but for this talk, I'd like to focus more on the history of Alda and its
+interesting relationship with Clojure.
+** If you're curious to hear more about the syntax and features of Alda, I would
+encourage you to watch my previous talks, and also check out the Alda website,
+which has links to documentation and a tutorial.
+
+==== Quick demo: Alda
+
+NOTE: 5 minutes
 
 * Show and play examples in editor.
+** Demo of features using Alda v1.x
+** Don't necessarily need to tell the audience that this is an older version of
+Alda right off the bat. The basic features of Alda should be consistent from v1
+to v2. Including attributes, which I don't need to explain right away are
+actually Lisp S-expressions.
+** Then demonstrate the inline Clojure code feature of Alda v1.
+*** Say something to the effect of "I should mention that I'm using Alda
+v1.whatever here.  There's a good reason for that. It's because I want to show
+you this feature that Alda used to have built-in prior to version 2..."
+*** alda-clj demo at the end of the talk will cover the same functionality
 
-* Go super light on the inline Clojure code, show just enough so that it's clear
-  that it's currently a feature of Alda.
-** alda-clj demo at the end of the talk will cover the same functionality
+
+
+==== 2004-2008
+
+* I studied Music in school. I got my degree in Music Composition and Bassoon
+  Performance.
+** At the time, I was interested in programming, but I'd only dabbled a little
+bit with BASIC and Visual Basic, and I'd made a few websites just for fun using
+HTML and CSS.
+** I happened to discover a music programming language called MML, which stands
+for Music Macro Language.
+*** MML dates back to the late 70's, when it was integrated with certain BASIC
+operating systems and used to make music for video games.
+*** There was also a huge chiptune Renaissance in the early 2000's, which became
+a little bit of an obsession for me. I learned how to use a dialect of MML to
+make music for the NES sound chip. Years later, MML would become a major
+influence on the syntax of Alda.
+** I took an introductory programming class as an elective and learned some
+Java. I really enjoyed it, but I was already on the path to getting a Music
+degree, so I sort of put programming aside for a while.
+
+==== 2008-2010 or so
+
+* A couple years after I graduated college, my roommate at the time got me into
+Linux.
+** I started getting more and more into programming just through learning how
+to customize my desktop environment, writing utility scripts, and learning how
+to use the command line.
+** Then I started to really discover my love of programming.
+*** I wet my toes with Python and Ruby, then started broadening my horizons and
+learning more about the various disciplines that can be applied to software
+development.
+*** I took to functional programming after learning a little bit of Haskell and
+Erlang.
+*** I discovered that I really enjoyed writing little command line tools to help
+me accomplish day-to-day tasks, and finding ways to make art by writing code.
+
+==== 2012-2014
+
+* At some point, I had a little daydream that turned into a full-on thought
+  experiment. I wondered what it might be like if there were a programming
+  environment that would allow me to compose music in a way that was flexible
+  enough to meet my needs as a classically-trained composer.
+** Would a text-based language allow me to express all of the concepts I'd
+learned in music theory and composition classes?
+** Would it make me more productive?
+** How might the creative process be different?
+
+* So I started to sketch out some syntax ideas, came up with a sort of rough,
+  informal language spec, and then I set about trying to implement it.
+** I made a couple of initial attempts in Python and Ruby, but I just wasn't
+finding myself productive enough in those languages to be able to implement a
+functional interpreter.
+** I had also recently discovered Clojure and become fluent enough with it that
+I was able to make another attempt at an Alda interpreter in Clojure, and that's
+the one that would ultimately become Alda, version 1.
+** I started working at Adzerk around the same time, and I was lucky enough to
+receive some very good input and feedback on Alda from my coworkers.
 
 === Evolution of Alda's architecture
 
 ==== phase 1: just a single clojure program that does everything
 
-_1 minute_
+NOTE: 1 minute
 
 ==== phase 2: break out client as java program for better CLI experience
 
-_1 minute_
+NOTE: 1 minute
 
 ==== phase 3: replace server implementation (http -> zmq REQ/REP)
 
-_2 minutes_
+NOTE: 2 minutes
 
 * brief introduction to ZeroMQ, a couple of socket types
 * REQ/REP
@@ -64,7 +143,7 @@ _2 minutes_
 
 ==== phase 4: add a worker process (zmq "paranoid pirate" pattern)
 
-_2 minutes_
+NOTE: 2 minutes
 
 * need for server-side reliability
 * DEALER/ROUTER sockets, "paranoid pirate" pattern
@@ -74,7 +153,7 @@ _2 minutes_
 
 ===== move most functionality into the client
 
-_1 minute_
+NOTE: 1 minute
 
 * server and worker go away
 * new objective: client must be fast af
@@ -83,7 +162,7 @@ _1 minute_
 
 ===== minimal player process
 
-_4 minutes_
+NOTE: 4 minutes
 
 * performs a minimal amount of what the worker currently performs, namely
   playback
@@ -103,7 +182,7 @@ _4 minutes_
 
 ===== shocking announcement
 
-_3 minutes_
+NOTE: 3 minutes
 
 * i plan to reimplement alda using go and kotlin
 ** ...although maybe i won't?  graalvm and cljs->node are also options
@@ -120,7 +199,7 @@ _3 minutes_
 
 === alda-clj
 
-_4 minutes_
+NOTE: 4 minutes
 
 * show github repo
 ** basic example under Usage in README
@@ -140,33 +219,20 @@ _4 minutes_
 
 === take questions
 
-_4 minutes_
+NOTE: 4 minutes
 
-== Scratchpad
+== TODO
 
-* Hello, Strange Loop! I'm here to tell you a story of love, marriage, and
-  divorce. Not of people, but of programming languages.
-** One of them is my brain-child, Alda.
-** Alda is a music composition programming language, born in Durham.
-** The other one is Clojure, a JVM Lisp, born in New York.
+* Revise time estimates
+** The estimates above came from my HoC talk proposal, which was for a 30 minute
+talk. At Strange Loop, it looks like I will have 40 minutes, including
+questions. So, there is about 10 additional minutes of wiggle room.
 
-* In order to tell this story, I also need to tell you a little bit about my own
-  progression as a software developer.
-** Segue into background that led to me initially toying with writing Alda in
-Python, then Ruby, finally settling on Clojure.
-** Started working at Adzerk not long after switching to Clojure, received
-input and development from my coworkers.
+* Pare down the introduction. I think it might be better to leave out some
+  detailed history and focus on the technical details.
 
-* Now before we get much further, I'd like to give you a quick demo of Alda,
-  because I think that most of you probably aren't familiar with Alda, and you
-  might want to know the characters in this story a little better.
-** Demo of features using Alda v1.x
-*** Don't necessarily need to tell the audience that this is an older version of
-Alda right off the bat. The basic features of Alda should be consistent from v1
-to v2. Including attributes, which I don't need to explain right away are
-actually Lisp S-expressions.
-*** Then demonstrate the inline Clojure code feature of Alda v1. Say something
-to the effect of "I should mention that I'm using Alda v1.whatever here.
-There's a good reason for that. It's because I want to show you this feature
-that Alda used to have prior to version 2..."
+* Look into `slidy` as a way to generate an HTML slideshow from AsciiDoc
+  documents.
+** http://www.w3.org/Talks/Tools/Slidy2/
+** http://asciidoc.org/slidy.html
 
