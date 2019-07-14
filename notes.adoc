@@ -225,8 +225,9 @@ NOTE: 4 minutes
 
 * Revise time estimates
 ** The estimates above came from my HoC talk proposal, which was for a 30 minute
-talk. At Strange Loop, it looks like I will have 40 minutes, including
-questions. So, there is about 10 additional minutes of wiggle room.
+talk (including questions). At Strange Loop, it looks like I will have 40
+minutes, including questions. So, there is about 10 additional minutes of wiggle
+room.
 
 * Pare down the introduction. I think it might be better to leave out some
   detailed history and focus on the technical details.
