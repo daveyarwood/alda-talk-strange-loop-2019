@@ -1,7 +1,23 @@
-= Alda's Dynamic Relationship With Clojure
-Dave Yarwood <dave.yarwood@gmail.com>
-:source-highlighter: rouge
-:toc: right
+= Alda's dynamic relationship with Clojure
+:title-separator: {sp}|
+:!sectids:
+:imagesdir: images
+
+Dave Yarwood (@dave_yarwood) +
+Software Engineer, Adzerk image:adzerk-logo.png[alt=Adzerk logo,75,75]
+
+[.img-left]
+== Hello
+
+image::dave-drums.jpg[500,500]
+
+[%build]
+* Self-taught programmer
+* Music degree from UNC (2008)
+* Disability examiner (2008-2014)
+* Created Alda (2012)
+** Music composition programming language
+* Software engineer at Adzerk (2014-)
 
 == Outline
 
