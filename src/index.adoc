@@ -3,15 +3,13 @@
 :!sectids:
 :imagesdir: images
 
-Dave Yarwood (@dave_yarwood) +
-Software Engineer, Adzerk image:adzerk-logo.png[alt=Adzerk logo,75,75]
-
 [.img-left]
 == Hello
 
 image::dave-drums.jpg[500,500]
 
-[%build]
+// TODO: social media icons / handles
+
 * Self-taught programmer
 * Music degree from UNC (2008)
 * Disability examiner (2008-2014)
@@ -19,11 +17,9 @@ image::dave-drums.jpg[500,500]
 ** Music composition programming language
 * Software engineer at Adzerk (2014-)
 
-== Outline
+== Introduction
 
-=== Introduction
-
-NOTE: 2 minutes (**FIXME: revise time estimates**)
+2 minutes (**FIXME: revise time estimates**)
 
 * Hello, Strange Loop! I'm here to tell you a story of love, marriage, and
   divorce. Not of people, but of programming languages.
@@ -37,7 +33,7 @@ in Durham.
 I'll tell you about where Alda came from and how it came to be what it is today.
 ** Then we'll jump ahead and look into the future.
 
-==== Present day
+== Present day
 
 * I'm Dave Yarwood, I'm a software engineer at Adzerk.
 ** We're the leading solution for developers who want to build their own
@@ -64,9 +60,9 @@ interesting relationship with Clojure.
 encourage you to watch my previous talks, and also check out the Alda website,
 which has links to documentation and a tutorial.
 
-==== Quick demo: Alda
+== Quick demo: Alda
 
-NOTE: 5 minutes
+5 minutes
 
 * Show and play examples in editor.
 ** Demo of features using Alda v1.x
@@ -82,7 +78,7 @@ you this feature that Alda used to have built-in prior to version 2..."
 
 
 
-==== 2004-2008
+== 2004-2008
 
 * I studied Music in school. I got my degree in Music Composition and Bassoon
   Performance.
@@ -101,7 +97,7 @@ influence on the syntax of Alda.
 Java. I really enjoyed it, but I was already on the path to getting a Music
 degree, so I sort of put programming aside for a while.
 
-==== 2008-2010 or so
+== 2008-2010 or so
 
 * A couple years after I graduated college, my roommate at the time got me into
 Linux.
@@ -117,7 +113,7 @@ Erlang.
 *** I discovered that I really enjoyed writing little command line tools to help
 me accomplish day-to-day tasks, and finding ways to make art by writing code.
 
-==== 2012-2014
+== 2012-2014
 
 * At some point, I had a little daydream that turned into a full-on thought
   experiment. I wondered what it might be like if there were a programming
@@ -139,46 +135,46 @@ the one that would ultimately become Alda, version 1.
 ** I started working at Adzerk around the same time, and I was lucky enough to
 receive some very good input and feedback on Alda from my coworkers.
 
-=== Evolution of Alda's architecture
+== Evolution of Alda's architecture
 
-==== phase 1: just a single clojure program that does everything
+== phase 1: just a single clojure program that does everything
 
-NOTE: 1 minute
+1 minute
 
-==== phase 2: break out client as java program for better CLI experience
+== phase 2: break out client as java program for better CLI experience
 
-NOTE: 1 minute
+1 minute
 
-==== phase 3: replace server implementation (http -> zmq REQ/REP)
+== phase 3: replace server implementation (http -> zmq REQ/REP)
 
-NOTE: 2 minutes
+2 minutes
 
 * brief introduction to ZeroMQ, a couple of socket types
 * REQ/REP
 * "lazy pirate" pattern for client-side reliability
 
-==== phase 4: add a worker process (zmq "paranoid pirate" pattern)
+== phase 4: add a worker process (zmq "paranoid pirate" pattern)
 
-NOTE: 2 minutes
+2 minutes
 
 * need for server-side reliability
 * DEALER/ROUTER sockets, "paranoid pirate" pattern
 * increased complexity at this point, foisted upon the user to some extent
 
-==== next phase
+== next phase
 
-===== move most functionality into the client
+== move most functionality into the client
 
-NOTE: 1 minute
+1 minute
 
 * server and worker go away
 * new objective: client must be fast af
 ** and have minimal startup time
 ** native executable?
 
-===== minimal player process
+== minimal player process
 
-NOTE: 4 minutes
+4 minutes
 
 * performs a minimal amount of what the worker currently performs, namely
   playback
@@ -196,9 +192,9 @@ NOTE: 4 minutes
 
 * new objective: support live-coding
 
-===== shocking announcement
+== shocking announcement
 
-NOTE: 3 minutes
+3 minutes
 
 * i plan to reimplement alda using go and kotlin
 ** ...although maybe i won't?  graalvm and cljs->node are also options
@@ -213,9 +209,9 @@ NOTE: 3 minutes
 *** the work at this point is simply to port the logic to a language better
     equipped to meet my goals for alda
 
-=== alda-clj
+== alda-clj
 
-NOTE: 4 minutes
+4 minutes
 
 * show github repo
 ** basic example under Usage in README
@@ -233,9 +229,9 @@ NOTE: 4 minutes
   Clojure code in an Alda score.
 ** e.g. use a Clojure library to make music
 
-=== take questions
+== take questions
 
-NOTE: 4 minutes
+4 minutes
 
 == TODO
 
@@ -247,9 +243,4 @@ room.
 
 * Pare down the introduction. I think it might be better to leave out some
   detailed history and focus on the technical details.
-
-* Look into `slidy` as a way to generate an HTML slideshow from AsciiDoc
-  documents.
-** http://www.w3.org/Talks/Tools/Slidy2/
-** http://asciidoc.org/slidy.html
 
