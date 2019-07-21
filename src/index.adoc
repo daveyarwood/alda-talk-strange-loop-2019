@@ -9,6 +9,18 @@ image:alda_logo.png[250,250]
 
 image:clojure_logo.png[250,250]
 
+== test code block
+
+.app.rb
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
 [.img-left]
 == Hello
 
