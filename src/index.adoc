@@ -3,6 +3,12 @@
 :!sectids:
 :imagesdir: images
 
+image:alda_logo.png[250,250]
+
+<=[?]=>
+
+image:clojure_logo.png[250,250]
+
 [.img-left]
 == Hello
 
