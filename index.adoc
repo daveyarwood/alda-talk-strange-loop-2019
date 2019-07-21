@@ -2,6 +2,13 @@
 :title-separator: {sp}|
 :!sectids:
 :imagesdir: images
+:source-highlighter: highlightjs
+:revealjs_customtheme: styles/djy.css
+:revealjs_transition: none
+:revealjs_transitionSpeed: fast
+:revealjs_controls: false
+:revealjs_progress: false
+:highlightjs-theme: styles/gruvbox-dark.css
 
 image:alda_logo.png[250,250]
 
@@ -9,24 +16,14 @@ image:alda_logo.png[250,250]
 
 image:clojure_logo.png[250,250]
 
-== test code block
-
-.app.rb
-[source,ruby]
-----
-require 'sinatra'
-
-get '/hi' do
-  "Hello World!"
-end
-----
-
-[.img-left]
 == Hello
 
-image::dave-drums.jpg[500,500]
-
 // TODO: social media icons / handles
+
+[cols="2*"]
+|===
+| image:dave-drums.jpg[500,500]
+a|
 
 * Self-taught programmer
 * Music degree from UNC (2008)
@@ -34,6 +31,7 @@ image::dave-drums.jpg[500,500]
 * Created Alda (2012)
 ** Music composition programming language
 * Software engineer at Adzerk (2014-)
+|===
 
 == Introduction
 
