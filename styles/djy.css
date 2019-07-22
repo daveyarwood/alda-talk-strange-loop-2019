@@ -228,14 +228,16 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #1352a2;
+  color: #fb6964;
   text-decoration: none;
+  padding: 0 5px 0 5px;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #1352a2;
+  color: #f0f1ee;
+  background-color: #fb6964;
   text-shadow: none;
   border: none; }
 
