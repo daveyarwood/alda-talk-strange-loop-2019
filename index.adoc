@@ -17,6 +17,16 @@ image:alda_logo.png[250,250]
 
 image:clojure_logo.png[250,250]
 
+[.notes]
+--
+* Introduction
+** 2 minutes (**FIXME: revise time estimates**)
+** Good afternoon! I'm here to tell a story about the relationship between two
+  programming languages.
+*** One of them is Alda, a text-based music composition language.
+*** The other is Clojure, a functional Lisp that runs on the JVM.
+--
+
 == !
 
 [cols="2*"]
@@ -33,32 +43,11 @@ a|
 * icon:globe[] *djy.io, alda.io*
 |===
 
-== Introduction
+== TODO: Adzerk slide
 
-2 minutes (**FIXME: revise time estimates**)
-
-* Hello, Strange Loop! I'm here to tell you a story of love, marriage, and
-  divorce. Not of people, but of programming languages.
-** One of them is my brain-child, a music composition language called Alda, born
-in Durham.
-** The other language is Clojure, a JVM Lisp, born in New York.
-
-* In order to tell this story, I also need to tell you a little bit about myself
-  and my journey as a software developer.
-** We'll start in the present day, and then we'll time travel a little bit and
-I'll tell you about where Alda came from and how it came to be what it is today.
-** Then we'll jump ahead and look into the future.
+_[insert marketing jargon here]_
 
 == Present day
-
-* I'm Dave Yarwood, I'm a software engineer at Adzerk.
-** We're the leading solution for developers who want to build their own
-fully-customized ad serving platform from scratch in a matter of weeks.
-*** _[insert other marketing jargon here, as suggested by Chris]_
-** Adzerk is my first programming job. I've been there for almost 5 years now,
-and I absolutely love it. The language that we use the most at Adzerk is
-Clojure. I'm a big fan of Clojure, and that's a major reason why I ended up
-working at Adzerk.
 
 * In 2012, I started to design and begin to implement a music composition
   programming language called Alda.
