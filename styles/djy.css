@@ -105,6 +105,12 @@ body {
   margin: 20px 0;
 }
 
+.reveal ol.no-bullet,
+.reveal dl.no-bullet,
+.reveal ul.no-bullet {
+  list-style-type: none;
+}
+
 .reveal li {
   margin-bottom: 0.75em;
 }
