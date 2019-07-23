@@ -47,80 +47,11 @@ a|
 
 _[insert marketing jargon here]_
 
-== Present day
+== TODO: Introductory Alda slides / elevator pitch
 
-* In 2012, I started to design and begin to implement a music composition
-  programming language called Alda.
-
-* Before we get much further, I'm going to give you a quick demo of Alda.
-  I think that most of you probably are not familiar with Alda, unless you were
-  at Strange Loop during the past couple years, where you may have seen me give
-  a lightning talk with a live demonstration, like I'm about to do here.
-** I've given a few talks in the past where I introduced Alda and I talked about
-the features of the language and how I use it to compose music.
-** I will try to cover a little bit of that today in the fastest way possible,
-but for this talk, I'd like to focus more on the history of Alda and its
-interesting relationship with Clojure.
-** If you're curious to hear more about the syntax and features of Alda, I would
-encourage you to watch my previous talks, and also check out the Alda website,
-which has links to documentation and a tutorial.
-
-== Quick demo: Alda
-
-5 minutes
-
-* Show and play examples in editor.
-** Demo of features using Alda v1.x
-** Don't necessarily need to tell the audience that this is an older version of
-Alda right off the bat. The basic features of Alda should be consistent from v1
-to v2. Including attributes, which I don't need to explain right away are
-actually Lisp S-expressions.
-** Then demonstrate the inline Clojure code feature of Alda v1.
-*** Say something to the effect of "I should mention that I'm using Alda
-v1.whatever here.  There's a good reason for that. It's because I want to show
-you this feature that Alda used to have built-in prior to version 2..."
-*** alda-clj demo at the end of the talk will cover the same functionality
-
-
-
-== 2004-2008
-
-* I studied Music in school. I got my degree in Music Composition and Bassoon
-  Performance.
-** At the time, I was interested in programming, but I'd only dabbled a little
-bit with BASIC and Visual Basic, and I'd made a few websites just for fun using
-HTML and CSS.
-** I happened to discover a music programming language called MML, which stands
-for Music Macro Language.
-*** MML dates back to the late 70's, when it was integrated with certain BASIC
-operating systems and used to make music for video games.
-*** There was also a huge chiptune Renaissance in the early 2000's, which became
-a little bit of an obsession for me. I learned how to use a dialect of MML to
-make music for the NES sound chip. Years later, MML would become a major
-influence on the syntax of Alda.
-** I took an introductory programming class as an elective and learned some
-Java. I really enjoyed it, but I was already on the path to getting a Music
-degree, so I sort of put programming aside for a while.
-
-== 2008-2010 or so
-
-* A couple years after I graduated college, my roommate at the time got me into
-Linux.
-** I started getting more and more into programming just through learning how
-to customize my desktop environment, writing utility scripts, and learning how
-to use the command line.
-** Then I started to really discover my love of programming.
-*** I wet my toes with Python and Ruby, then started broadening my horizons and
-learning more about the various disciplines that can be applied to software
-development.
-*** I took to functional programming after learning a little bit of Haskell and
-Erlang.
-*** I discovered that I really enjoyed writing little command line tools to help
-me accomplish day-to-day tasks, and finding ways to make art by writing code.
-
-== 2012-2014
-
-* At some point, I had a little daydream that turned into a full-on thought
+[.notes]
+--
+* In 2012, I had a little daydream that turned into a full-on thought
   experiment. I wondered what it might be like if there were a programming
   environment that would allow me to compose music in a way that was flexible
   enough to meet my needs as a classically-trained composer.
@@ -139,6 +70,38 @@ I was able to make another attempt at an Alda interpreter in Clojure, and that's
 the one that would ultimately become Alda, version 1.
 ** I started working at Adzerk around the same time, and I was lucky enough to
 receive some very good input and feedback on Alda from my coworkers.
+--
+
+== Quick demo: Alda
+
+[.notes]
+5 minutes
+--
+* Before we get much further, I'm going to give you a quick demo of Alda.
+  If you were here at Strange Loop during the past couple years, you may have
+  seen me give a lightning talk with a live demonstration, like I'm about to do
+  here.
+** I've given a few talks in the past where I introduced Alda and I talked about
+the features of the language and how I use it to compose music.
+** I will try to cover a little bit of that today in the fastest way possible,
+but for this talk, I'd like to focus more on the history of Alda and its
+interesting relationship with Clojure.
+** If you're curious to hear more about the syntax and features of Alda, I would
+encourage you to watch my previous talks, and also check out the Alda website,
+which has links to documentation and a tutorial.
+
+* Show and play examples in editor.
+** Demo of features using Alda v1.x
+** Don't necessarily need to tell the audience that this is an older version of
+Alda right off the bat. The basic features of Alda should be consistent from v1
+to v2. Including attributes, which I don't need to explain right away are
+actually Lisp S-expressions.
+** Then demonstrate the inline Clojure code feature of Alda v1.
+*** Say something to the effect of "I should mention that I'm using Alda
+v1.whatever here.  There's a good reason for that. It's because I want to show
+you this feature that Alda used to have built-in prior to version 2..."
+*** alda-clj demo at the end of the talk will cover the same functionality
+--
 
 == Evolution of Alda's architecture
 
