@@ -195,8 +195,8 @@ are better able to help me achieve my goals for alda
 == TODO
 
 * I have a budget of 40 minutes, including time at the end for questions.
-Currently, I have an estimated 30 minutes of material. I may want to dive deeper
-into some interesting areas.
+Currently, I have an estimated 30 minutes of material including time for
+questions. I may want to dive deeper into some interesting areas.
 ** Ideas for additional things to discuss:
 *** Exploration of languages/runtimes available for creating native executables
 and why I decided to go with Go.
@@ -206,3 +206,4 @@ and why I decided to go with Go.
 **** Clojure w/ GraalVM
 **** ClojureScript targeting Node.js
 *** Experience report of porting Clojure code to Go
+*** Fill up more time with cool demos
