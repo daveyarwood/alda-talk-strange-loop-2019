@@ -20,7 +20,7 @@ image:clojure_logo.png[250,250]
 [.notes]
 --
 * Introduction
-** 2 minutes (**FIXME: revise time estimates**)
+** 2 minutes
 ** Good afternoon! I'm here to tell a story about the relationship between two
   programming languages.
 *** One of them is Alda, a text-based music composition language.
@@ -51,25 +51,16 @@ _[insert marketing jargon here]_
 
 [.notes]
 --
-* In 2012, I had a little daydream that turned into a full-on thought
-  experiment. I wondered what it might be like if there were a programming
-  environment that would allow me to compose music in a way that was flexible
-  enough to meet my needs as a classically-trained composer.
+* Brief description / elevator pitch of Alda
+** 1 minute
+** In 2012, I had a little daydream that turned into a full-on thought
+experiment. I wondered what it might be like if there were a programming
+environment that would allow me to compose music in a way that was flexible
+enough to meet my needs as a classically-trained composer.
 ** Would a text-based language allow me to express all of the concepts I'd
 learned in music theory and composition classes?
 ** Would it make me more productive?
 ** How might the creative process be different?
-
-* So I started to sketch out some syntax ideas, came up with a sort of rough,
-  informal language spec, and then I set about trying to implement it.
-** I made a couple of initial attempts in Python and Ruby, but I just wasn't
-finding myself productive enough in those languages to be able to implement a
-functional interpreter.
-** I had also recently discovered Clojure and become fluent enough with it that
-I was able to make another attempt at an Alda interpreter in Clojure, and that's
-the one that would ultimately become Alda, version 1.
-** I started working at Adzerk around the same time, and I was lucky enough to
-receive some very good input and feedback on Alda from my coworkers.
 --
 
 == Quick demo: Alda
@@ -203,12 +194,15 @@ are better able to help me achieve my goals for alda
 
 == TODO
 
-* Revise time estimates
-** The estimates above came from my HoC talk proposal, which was for a 30 minute
-talk (including questions). At Strange Loop, it looks like I will have 40
-minutes, including questions. So, there is about 10 additional minutes of wiggle
-room.
-
-* Pare down the introduction. I think it might be better to leave out some
-  detailed history and focus on the technical details.
-
+* I have a budget of 40 minutes, including time at the end for questions.
+Currently, I have an estimated 30 minutes of material. I may want to dive deeper
+into some interesting areas.
+** Ideas for additional things to discuss:
+*** Exploration of languages/runtimes available for creating native executables
+and why I decided to go with Go.
+**** Go
+**** Rust
+**** Crystal
+**** Clojure w/ GraalVM
+**** ClojureScript targeting Node.js
+*** Experience report of porting Clojure code to Go
