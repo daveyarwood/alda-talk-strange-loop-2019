@@ -165,8 +165,9 @@ you this feature that Alda used to have built-in prior to version 2..."
 3 minutes
 
 * i plan to reimplement alda using go and kotlin
-** ...although maybe i won't?  graalvm and cljs->node are also options
-** the point is, i've decided to decouple alda from clojure
+** primary objective: decouple alda from clojure
+** i'm also taking the opportunity to switch to languages/runtimes that i think
+are better able to help me achieve my goals for alda
 *** enumerate reasons here (refer to alda-clj "history" document)
 *** i realized that i could still use clojure to write alda scores in a way
     that doesn't require alda to be implemented in clojure
@@ -174,8 +175,7 @@ you this feature that Alda used to have built-in prior to version 2..."
     taken to heart
 *** i was able to use clojure to quickly iterate to where alda is now, a feat
     that would have been tedious in a less concise/expressive language
-*** the work at this point is simply to port the logic to a language better
-    equipped to meet my goals for alda
+** maybe discuss alternatives: graalvm, cljs->node
 
 == alda-clj
 
