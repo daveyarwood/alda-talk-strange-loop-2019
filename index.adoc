@@ -47,16 +47,18 @@ a|
 
 _[insert marketing jargon here]_
 
-== TODO: Introductory Alda slides / elevator pitch
+== !
+
+image::elevator.jpg[background]
 
 [.notes]
 --
 * Brief description / elevator pitch of Alda
 ** 1 minute
-** In 2012, I had a little daydream that turned into a full-on thought
-experiment. I wondered what it might be like if there were a programming
-environment that would allow me to compose music in a way that was flexible
-enough to meet my needs as a classically-trained composer.
+** In 2012, I had a little daydream about what it might be like if I could compose music in a way similar to the way that I develop software.
+** I found that I was more productive in a command-line environment using a
+simple text editor without all of the features of an IDE.
+** I wondered if I could compose music in an environment like that.
 ** Would a text-based language allow me to express all of the concepts I'd
 learned in music theory and composition classes?
 ** Would it make me more productive?
