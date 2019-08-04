@@ -21,8 +21,8 @@ image:clojure_logo.png[250,250]
 --
 * Introduction
 ** 2 minutes
-** Good afternoon! I'm here to tell a story about the relationship between two
-  programming languages.
+** I'm here to tell a story about the relationship between two programming
+languages.
 *** One of them is Alda, a text-based music composition language.
 *** The other is Clojure, a functional Lisp that runs on the JVM.
 --
