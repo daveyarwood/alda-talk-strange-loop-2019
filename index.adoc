@@ -58,14 +58,13 @@ _[insert marketing jargon here]_
 ** 1 minute
 ** Alda is a language for writing music in a text format.
 ** The text is your source code, which can parsed and interpreted by a playback
-process, allowing you to hear the music that you're writing as you're writing
-it.
+process, which allows you to hear the music that you're writing as you're
+writing it.
 ** I was inspired to create Alda after I studied music composition and then I
 got more into software development and I learned how I could use a text editor
-and the command line to develop interactively.
+and the command line to develop software interactively.
 ** I believe that a tight feedback loop is essential to unlocking your
-creativity when you're developing software, and the same principle applies when
-you're composing music.
+creativity both when you're developing software and when you're composing music.
 --
 
 image::elevator.jpg[background]
