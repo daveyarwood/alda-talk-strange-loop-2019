@@ -199,9 +199,8 @@ Clojure code in an Alda score.
 
 == TODO
 
-* I have a budget of 40 minutes, including time at the end for questions.
-Currently, I have an estimated 30 minutes of material including time for
-questions. I may want to dive deeper into some interesting areas.
+* I'm under budget for time. I may want to dive deeper into some interesting
+areas to fill time.
 ** Ideas for additional things to discuss:
 *** Exploration of languages/runtimes available for creating native executables
 and why I decided to go with Go.
