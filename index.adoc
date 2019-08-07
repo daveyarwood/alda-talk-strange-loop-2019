@@ -69,6 +69,43 @@ creativity both when you're developing software and when you're composing music.
 
 image::elevator.jpg[background]
 
+== Music composition GUI
+
+[.notes]
+--
+* Compare and contrast GUI vs. TUI music composition
+** 5 minutes
+--
+
+TODO: screenshot of Sibelius
+
+* Mouse-oriented
+* Distracting
+* Cumbersome
+* Limiting
+
+== !
+
+[.notes]
+--
+* Relate the Sapir-Worff hypothesis to the limiting aspect of composing music in
+a GUI
+--
+
+TODO: find an image that illustrates the Sapir-Worff hypothesis
+
+== Music composition TUI
+
+[cols="2*"]
+|===
+| image:jimenez_screenshot.png[editing an Alda score]
+a|
+* Keyboard-oriented
+* Focused
+* Efficient
+* Liberating
+|===
+
 == Quick demo: Alda
 
 [.notes]
