@@ -106,34 +106,48 @@ a|
 * Liberating
 |===
 
-== Quick demo: Alda
+== Demo: Alda v1
+
+* Just a quick survey of features
+* To learn more about Alda:
+** https://alda.io (docs, tutorial)
+** https://github.com/alda-lang/alda
+** Previous talks on YouTube
 
 [.notes]
-5 minutes
 --
-* Before we get much further, I'm going to give you a quick demo of Alda.
-If you were here at Strange Loop during the past couple years, you may have seen
-me give a lightning talk with a live demonstration, like I'm about to do here.
-** I've given a few talks in the past where I introduced Alda and I talked about
-the features of the language and how I use it to compose music.
-** I will try to cover a little bit of that today in the fastest way possible,
-but for this talk, I'd like to focus more on the history of Alda and its
-interesting relationship with Clojure.
-** If you're curious to hear more about the syntax and features of Alda, I would
-encourage you to watch my previous talks, and also check out the Alda website,
-which has links to documentation and a tutorial.
+* TODO: put together example files
+** alda-demos repo is a start
 
-* Show and play examples in editor.
-** Demo of features using Alda v1.x
-** Don't necessarily need to tell the audience that this is an older version of
-Alda right off the bat. The basic features of Alda should be consistent from v1
-to v2. Including attributes, which I don't need to explain right away are
-actually Lisp S-expressions.
-** Then demonstrate the inline Clojure code feature of Alda v1.
-*** Say something to the effect of "I should mention that I'm using Alda
-v1.whatever here.  There's a good reason for that. It's because I want to show
-you this feature that Alda used to have built-in prior to version 2..."
-*** alda-clj demo at the end of the talk will cover the same functionality
+* Basic syntax
+** Notes
+** Rests
+** Accidentals
+** Octave
+
+* Duration
+** Note length
+*** Dots
+*** Second/millisecond note lengths
+*** Non-standard note lengths
+** CRAM
+
+* Concurrency
+** Chords
+** Voices
+** Parts
+
+* Other features
+** (Can probably trim this down. Just want to quickly show that Alda can achieve
+things that can't be easily expressed in standard musical notation.)
+** Variables
+** Alternate iterations
+
+* Clojure expressions
+** Basic translation / score DSL
+** Do something cool with shuffle / seq fns
+** Maybe leave it at that. Leave room for the v2 demo to be even cooler than
+this one.
 --
 
 == Evolution of Alda's architecture
