@@ -11,12 +11,6 @@
 :revealjs_progress: false
 :highlightjs-theme: styles/gruvbox-dark.css
 
-image:alda_logo.png[250,250]
-
-<=[?]=>
-
-image:clojure_logo.png[250,250]
-
 [.notes]
 --
 * Introduction
@@ -26,7 +20,15 @@ languages.
 *** One of them is Alda, a text-based music composition language.
 *** The other is Clojure, a functional programming-oriented Lisp that runs on
 the JVM.
+*** Slide: about me
+*** Slide: about Adzerk
 --
+
+image:alda_logo.png[250,250]
+
+<=[?]=>
+
+image:clojure_logo.png[250,250]
 
 == !
 
@@ -50,21 +52,23 @@ _[insert marketing jargon here]_
 
 == !
 
-image::elevator.jpg[background]
-
 [.notes]
 --
-* Brief description / elevator pitch of Alda
+* Elevator pitch for Alda
 ** 1 minute
-** In 2012, I had a little daydream about what it might be like if I could compose music in a way similar to the way that I develop software.
-** I found that I was more productive in a command-line environment using a
-simple text editor without all of the features of an IDE.
-** I wondered if I could compose music in an environment like that.
-** Would a text-based language allow me to express all of the concepts I'd
-learned in music theory and composition classes?
-** Would it make me more productive?
-** How might the creative process be different?
+** Alda is a language for writing music in a text format.
+** The text is your source code, which can parsed and interpreted by a playback
+process, allowing you to hear the music that you're writing as you're writing
+it.
+** I was inspired to create Alda after I studied music composition and then I
+got more into software development and I learned how I could use a text editor
+and the command line to develop interactively.
+** I believe that a tight feedback loop is essential to unlocking your
+creativity when you're developing software, and the same principle applies when
+you're composing music.
 --
+
+image::elevator.jpg[background]
 
 == Quick demo: Alda
 
