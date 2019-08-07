@@ -1,0 +1,15 @@
+# Clojure DSL
+
+# markup style
+piano: o4 c1/g/>d/e
+
+# equivalent clojure code
+(part "piano")
+(octave 4)
+(chord
+  (note (pitch :c))
+  (note (pitch :g))
+  (octave :up)
+  (note (pitch :d))
+  (note (pitch :e)))
+

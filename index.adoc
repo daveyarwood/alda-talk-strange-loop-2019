@@ -116,38 +116,16 @@ a|
 
 [.notes]
 --
-* TODO: put together example files
-** alda-demos repo is a start
-
-* Basic syntax
-** Notes
-** Rests
-** Accidentals
-** Octave
-
-* Duration
-** Note length
-*** Dots
-*** Second/millisecond note lengths
-*** Non-standard note lengths
-** CRAM
-
-* Concurrency
-** Chords
-** Voices
-** Parts
-
-* Other features
-** (Can probably trim this down. Just want to quickly show that Alda can achieve
-things that can't be easily expressed in standard musical notation.)
-** Variables
-** Alternate iterations
-
-* Clojure expressions
-** Basic translation / score DSL
-** Do something cool with shuffle / seq fns
-** Maybe leave it at that. Leave room for the v2 demo to be even cooler than
-this one.
+* 10 minutes
+** See alda files in demo/alda-v1
+** Can probably trim this down. Just want to quickly show what you can do with
+Alda and how it can achieve things that can't be easily expressed in standard
+musical notation.
+** TODO: Time this and see how long it really is. Might be shorter than 10
+minutes.
+** TODO: flesh out a couple of demos
+*** less cheesy variables example
+*** clojure seq fns example
 --
 
 == Evolution of Alda's architecture

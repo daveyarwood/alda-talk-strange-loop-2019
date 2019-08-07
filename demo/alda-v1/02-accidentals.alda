@@ -1,0 +1,8 @@
+# accidentals (flats & sharps)
+piano: d e f+
+piano: e- f g
+piano: d+ e+ f++
+
+# the sky is the limit!
+piano: a++++++--++-+-+
+

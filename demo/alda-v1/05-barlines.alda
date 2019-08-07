@@ -1,0 +1,7 @@
+# measures?
+
+# pff! who needs 'em?
+piano: c12 c7 c1 c14 c8 c6 c19 c5 c6 c7
+
+# we do have barlines, though. put them wherever you want
+piano: c12 c7 c1 | c14 c8 c6 c19 | c5 c6 c7
