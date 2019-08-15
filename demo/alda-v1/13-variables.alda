@@ -1,22 +1,12 @@
 # variables
 
-# TODO: less cheesy example
+riffA = a16 b- a8
+riffB = >c4<
 
-(tempo! 160)
+piccolo: o5 riffA riffB
 
-riffA = f8 f g+ a > c c d c <
-riffB = b-8 b- > c+ d f f g f <
-riffC = > c8 c d+ e g g a g <
-riffD = f8 f g+ a > c c d < b > | c c < b- b- a a g g
+# variables can reference other variables
+riffAB = riffA riffB
 
-rockinRiff = [
-  riffA*4
-  riffB*2 riffA*2
-  riffC riffB riffD
-]
+piccolo: o5 riffAB
 
-electric-guitar-distorted "guitar": o2
-tenor-saxophone "sax": o3
-
-guitar/sax:
-  rockinRiff*8
