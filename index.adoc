@@ -123,7 +123,6 @@ Alda and how it can achieve things that can't be easily expressed in standard
 musical notation.
 ** TODO: Time this and see how long it really is. Might be shorter than 10
 minutes.
-** TODO: clojure seq fns example
 --
 
 == Evolution of Alda's architecture

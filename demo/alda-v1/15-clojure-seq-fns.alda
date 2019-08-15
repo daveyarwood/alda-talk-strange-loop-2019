@@ -1,3 +1,16 @@
 # leveraging the clojure standard library
 
-# TODO: something cool with seq fns
+(defn random-notes
+  [n]
+  (take n (shuffle (alda-code "c c+ d d+ e f f+ g g+ a b- b"))))
+
+ocarina:
+  (set-note-length 8)
+  (random-notes 4) *4
+
+ocarina:
+  (set-note-length 16)
+  (let [n 16]
+    (->> (random-notes n)
+         (iterate rest)
+         (take n)))
