@@ -3,6 +3,3 @@
 # C0, C1, C2, C3, etc.
 piano: o0 c > c > c > c > c > c > c > c > c > c
 
-# F major
-piano: o3 f8 g a b- > c < b- a g f4
-
