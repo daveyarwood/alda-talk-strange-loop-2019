@@ -1,3 +1,6 @@
 /.bundle/gems/
 /Gemfile.lock
 *.html
+.lsp/
+.cpcache/
+.socket-port
