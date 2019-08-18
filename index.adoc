@@ -215,7 +215,7 @@ that would have been tedious in a less concise/expressive language
 ** Clojure's REPL-driven development experience unlocks my creativity
 *** Easier to experiment with Clojure code than it is from within Alda
 
-=== Demo: alda-clj
+== Demo: alda-clj
 
 [.notes]
 --
