@@ -212,12 +212,18 @@ that would have been tedious in a less concise/expressive language
 ** full control of the program, can run it wherever you like
 *** e.g. a script, a web application
 ** can leverage cljdoc to provide API docs
+** Clojure's REPL-driven development experience unlocks my creativity
+*** Easier to experiment with Clojure code than it is from within Alda
+
+=== Demo: alda-clj
+
+[.notes]
+--
+5 minutes
 
 * Demonstrate basic usage in editor-connected REPL
-
-* Demonstrate something you can do with alda-clj that you can't do with inline
-Clojure code in an Alda score.
-** e.g. use a Clojure library to make music
+* _Meteorology_ piece
+--
 
 == take questions
 
