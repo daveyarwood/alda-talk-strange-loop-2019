@@ -16,6 +16,6 @@ piano:
   c5 c c c c       # "5th" notes   (5 notes = 1 measure of 4/4)
   c6 c c c c c     # "6th" notes   (6 notes = 1 measure of 4/4)
   c7 c c c c c c   # "7th" notes   (7 notes = 1 measure of 4/4)
-  c8 c c c c c c c # eighth notes (8 notes = 1 measure of 4/4)
+  c8 c c c c c c c # eighth notes  (8 notes = 1 measure of 4/4)
   c4
 

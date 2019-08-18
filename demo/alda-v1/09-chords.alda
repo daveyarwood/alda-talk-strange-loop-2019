@@ -3,9 +3,3 @@ piano: o4 c1/g/>d/e
 piano: o4 c1/e-/g/b
 piano: o3 g1/>d/f+/a
 
-# chords with moving notes
-# can you hear the two voices?
-piano:
-  o4 c1/e/g/>c4 < b a g |
-  < g+1/b/>e
-
