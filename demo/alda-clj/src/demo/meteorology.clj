@@ -1,4 +1,4 @@
-(ns demo.alda-clj
+(ns demo.meteorology
   (:require [alda.core         :refer :all]
             [clj-http.client   :as    http]
             [clojure.data.json :as    json]
@@ -10,7 +10,7 @@
     :coordinates [40.71 -74.00]
     :instrument  "percussion"
     :transpose   -36
-    :volume      100}
+    :volume      85}
    {:name        "Chicago"
     :coordinates [41.88 -87.63]
     :instrument  "upright-bass"
@@ -88,21 +88,28 @@
      (note (midi-note temperature)
            (duration (note-length (max wind-speed 0.5))))]))
 
-(defn sample-forecast
+(def score
+  (atom nil))
+
+(defn generate-score!
   []
-  (-> @forecasts first :forecast first))
+  (reset! score
+          (for [{:keys [city forecast]} @forecasts
+                :let [{:keys [instrument volume transpose]} city]]
+            [(part instrument)
+             (vol volume)
+             (transposition (or transpose 0))
+             (map forecast-note forecast)]))
+  :ok)
 
 (comment
   (do
     (collect-forecasts!)
     (load-forecasts!)
-    (stop!)
-    (clear-history!))
+    (generate-score!)
+    (do
+      (stop!)
+      (clear-history!)))
 
-  (play!
-    (for [{:keys [city forecast]} @forecasts
-          :let [{:keys [instrument volume transpose]} city]]
-      [(part instrument)
-       (vol volume)
-       (transposition (or transpose 0))
-       (map forecast-note forecast)])))
+  (play! @score))
+
