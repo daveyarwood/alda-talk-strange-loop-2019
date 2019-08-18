@@ -116,7 +116,7 @@ a|
 
 [.notes]
 --
-* 10 minutes
+* 10 minutes (maybe less now? need to time it again)
 ** See alda files in demo/alda-v1
 ** Keep explanations short!
 ** Don't necessarily even need to play every line of code.
@@ -226,19 +226,21 @@ that would have been tedious in a less concise/expressive language
 
 == take questions
 
-4 minutes
+5 minutes
 
 == TODO
 
-* I'm under budget for time. I may want to dive deeper into some interesting
-areas to fill time.
-** Ideas for additional things to discuss:
-*** Exploration of languages/runtimes available for creating native executables
+* Flesh out slides enough that I can practice going through the talk from start
+to finish and time it.
+* I suspect that I might be over time at this point.
+* If for whatever reason I'm under time, ideas of additional things I could
+discuss:
+** Exploration of languages/runtimes available for creating native executables
 and why I decided to go with Go.
-**** Go
-**** Rust
-**** Crystal
-**** Clojure w/ GraalVM
-**** ClojureScript targeting Node.js
-*** Experience report of porting Clojure code to Go
-*** Fill up more time with cool demos
+*** Go
+*** Rust
+*** Crystal
+*** Clojure w/ GraalVM
+*** ClojureScript targeting Node.js
+** Experience report of porting Clojure code to Go
+
