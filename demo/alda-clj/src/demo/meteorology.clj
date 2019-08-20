@@ -11,8 +11,8 @@
     :instrument  "percussion"
     :transpose   -36
     :volume      85}
-   {:name        "Chicago"
-    :coordinates [41.88 -87.63]
+   {:name        "Los Angeles"
+    :coordinates [34.05 -118.24]
     :instrument  "upright-bass"
     :transpose   -36
     :volume      90}
