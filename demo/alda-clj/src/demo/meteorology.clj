@@ -19,7 +19,7 @@
    {:name        "St. Louis"
     :coordinates [38.63 -90.20]
     :instrument  "tenor-saxophone"
-    :transpose   -24
+    :transpose   -18
     :volume      80}
    {:name        "Durham"
     :coordinates [35.99 -78.90]
