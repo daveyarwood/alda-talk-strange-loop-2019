@@ -77,12 +77,15 @@ image::elevator.jpg[background]
 ** 5 minutes
 --
 
-TODO: screenshot of Sibelius
-
+[cols="3,2"]
+|===
+| image:sibelius.jpg[screenshot of Sibelius]
+a|
 * Mouse-oriented
 * Distracting
 * Cumbersome
 * Limiting
+|===
 
 == !
 
@@ -96,7 +99,7 @@ TODO: find an image that illustrates the Sapir-Worff hypothesis
 
 == Music composition TUI
 
-[cols="2*"]
+[cols="3,2"]
 |===
 | image:jimenez_screenshot.png[editing an Alda score]
 a|
