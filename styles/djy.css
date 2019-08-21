@@ -224,6 +224,10 @@ body {
 .reveal small * {
   vertical-align: top; }
 
+.reveal .line-through {
+  text-decoration: line-through;
+}
+
 /*********************************************
  * LINKS
  *********************************************/
