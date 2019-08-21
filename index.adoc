@@ -91,11 +91,11 @@ a|
 
 [.notes]
 --
-* Relate the Sapir-Worff hypothesis to the limiting aspect of composing music in
+* Relate the Sapir-Whorf hypothesis to the limiting aspect of composing music in
 a GUI
 --
 
-TODO: find an image that illustrates the Sapir-Worff hypothesis
+image::snow-cone.jpg[Eskimos have many words for snow,600,600]
 
 == Music composition TUI
 
