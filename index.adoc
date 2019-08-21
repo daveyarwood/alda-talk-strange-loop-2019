@@ -127,62 +127,133 @@ a|
 things that can't be easily expressed in standard musical notation.
 --
 
-== Evolution of Alda's architecture
+== !
 
-== phase 1: just a single clojure program that does everything
+[.notes]
+--
+The evolution of Alda's architecture
+--
 
+image::blueprint.jpg[background]
+
+== Phase 1: Single program
+
+[.notes]
+--
 1 minute
+phase 1: just a single clojure program that does everything
+--
 
-== phase 2: break out client as java program for better CLI experience
+image::phase1.svg[]
 
+== Phase 1: Single program
+
+[%step]
+* Problem: Clojure startup time
+* Problem: Blocks until playback is complete
+
+== Phase 2: Client/server (HTTP)
+
+[.notes]
+--
 1 minute
+phase 2: break out client as java program for better CLI experience
+--
 
-== phase 3: replace server implementation (http -> zmq REQ/REP)
+image::phase2.svg[]
 
+== Phase 2: Client/server (HTTP)
+
+[%step]
+* [.line-through]#Problem: Clojure startup time#
+* [.line-through]#Problem: Blocks until playback is complete#
+* Problem: HTTP is a bit overkill for IPC
+* Problem: Audio glitches when playing multiple scores
+
+== Phase 3: Client/server (ZeroMQ)
+
+[.notes]
+--
 2 minutes
+phase 3: replace server implementation (http -> zmq REQ/REP)
+--
+
+image::phase3.svg[]
+
+== ZeroMQ
+
+TODO: a slide or two about ZeroMQ
 
 * brief introduction to ZeroMQ, a couple of socket types
 * REQ/REP
 * "lazy pirate" pattern for client-side reliability
 
-== phase 4: add a worker process (zmq "paranoid pirate" pattern)
+== Phase 3: Client/server (ZeroMQ)
 
+[%step]
+* [.line-through]#Problem: HTTP is a bit overkill for IPC#
+* Problem: Audio glitches when playing multiple scores
+
+== Phase 4: Client/server/workers
+
+[.notes]
+--
 2 minutes
+phase 4: add a worker process (zmq "paranoid pirate" pattern)
 
 * need for server-side reliability
 * DEALER/ROUTER sockets, "paranoid pirate" pattern
 * increased complexity at this point, foisted upon the user to some extent
+--
 
-== next phase
+image::phase4.svg[]
 
-== move most functionality into the client
+== Phase 4: Client/server/workers
 
+[%step]
+* [.line-through]#Problem: Audio glitches when playing multiple scores#
+* Problem: This is getting complicated.
+* Problem: User needs to manage server & workers
+* Problem: Can't do anything if workers are busy
+
+== Alda v2 wishlist
+
+[.notes]
+--
 1 minute
+--
 
-* server and worker go away
-* new objective: client must be fast af
-** and have minimal startup time
-** native executable?
+[%step]
+* Move most functionality into the client
+** No more server/workers
+* Client should be *fast af*
+** Native executable?
+* Support for live coding
 
-== minimal player process
+== !
 
+TODO: architecture diagram of client + player processes
+
+[.notes]
+--
 4 minutes
 
 * performs a minimal amount of what the worker currently performs, namely
 playback
 
 * necessary to be a separate process because playback happens asynchronously
+--
 
-* new objective: general purpose
-** could be driven by something other than the alda client
-** driven by OSC
-*** simpler than ZeroMQ, better track record of use for realtime audio
-applications
-*** already supported by lots of things, a standard for audio programming
+== OSC
+
+TODO: a slide or two about OSC
+
+* general purpose
+* could be driven by something other than the alda client
+* simpler than ZeroMQ, track record of use for realtime audio applications
+* already supported by lots of things, a standard for audio programming
 
 * brief introduction to OSC
-
-* new objective: support live-coding
 
 == shocking announcement
 
