@@ -79,12 +79,15 @@
 
    The temperature (F) is used verbatim as the MIDI note number.
    The wind direction affects the panning.
-   The wind speed affects the note length."
+   The wind speed affects the volume and note length."
   [{:strs [temperature windDirection windSpeed]}]
   (let [wind-speed (->> windSpeed (re-find #"\d+") Integer/parseInt)]
     [(panning (or (wind-direction->panning windDirection)
                   (throw (ex-info "Unrecognized wind direction"
                                   {:wind-direction windDirection}))))
+     (volume (+ 35
+                (min 65
+                     (* 65 (/ wind-speed 10.0)))))
      (note (midi-note temperature)
            (duration (note-length (max wind-speed 0.5))))]))
 
@@ -100,6 +103,7 @@
              (vol volume)
              (transposition (or transpose 0))
              (map forecast-note forecast)]))
+  (spit "/tmp/meteorology.alda" (->str @score))
   :ok)
 
 (comment
@@ -109,7 +113,8 @@
     (generate-score!)
     (do
       (stop!)
-      (clear-history!)))
+      (clear-history!))
+    :ready)
 
   (play! @score))
 
