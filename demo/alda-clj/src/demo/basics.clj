@@ -32,8 +32,10 @@
   ;; generate a sequence of random notes
   (play!
     (part "piano")
-    (for [length (repeatedly 8 #(+ 250 (rand-int 750)))
-          :let [note-number (+ 25 (rand-int 70))]]
+    (for [[length note-number]
+          (repeatedly 8 #(list
+                           (+ 250 (rand-int 750))
+                           (+ 25 (rand-int 70))))]
       (note (midi-note note-number)
             (duration (ms length))))))
 
