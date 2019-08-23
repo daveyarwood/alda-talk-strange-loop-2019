@@ -230,9 +230,9 @@ image::phase4.svg[]
 ** Native executable?
 * Support for live coding
 
-== !
+== Phase 5: Client/player
 
-TODO: architecture diagram of client + player processes
+image::phase5.svg[]
 
 [.notes]
 --
