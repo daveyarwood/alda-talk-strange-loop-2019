@@ -255,30 +255,47 @@ TODO: a slide or two about OSC
 
 * brief introduction to OSC
 
-== shocking announcement
+== Phase 5: Client/player
+
+[.notes]
+--
+* next slide
+--
+
+image::phase5.svg[]
+
+== Phase 5: Client/player
 
 [.notes]
 --
 3 minutes
-
-* idea: add to phase 5 diagram
-** go logo over client, kotlin logo over player
-** "where does clojure fit into the picture now?"
-*** clojure logo off to the side, arrow into the client
-*** natural segue into alda-clj
 
 * i plan to reimplement alda using go and kotlin
 ** primary objective: decouple alda from clojure
 ** i'm also taking the opportunity to switch to languages/runtimes that i think
 are better able to help me achieve my goals for alda
 *** enumerate reasons here (refer to alda-clj "history" document)
-*** i realized that i could still use clojure to write alda scores in a way
+*** maybe discuss alternatives: graalvm, cljs->node
+--
+
+TODO: go logo over client, kotlin logo over player
+
+image::phase5a.svg[]
+
+== Phase 5: Client/player
+
+TODO: clojure logo off to the side, arrow into the client
+
+image::phase5b.svg[]
+
+[.notes]
+--
+* i realized that i could still use clojure to write alda scores in a way
 that doesn't require alda to be implemented in clojure
-*** micha mentioned clojure's value as a prototyping language, words i've
+* micha mentioned clojure's value as a prototyping language, words i've
 taken to heart
-*** i was able to use clojure to quickly iterate to where alda is now, a feat
+* i was able to use clojure to quickly iterate to where alda is now, a feat
 that would have been tedious in a less concise/expressive language
-** maybe discuss alternatives: graalvm, cljs->node
 --
 
 == alda-clj
