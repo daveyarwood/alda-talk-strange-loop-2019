@@ -257,7 +257,15 @@ TODO: a slide or two about OSC
 
 == shocking announcement
 
+[.notes]
+--
 3 minutes
+
+* idea: add to phase 5 diagram
+** go logo over client, kotlin logo over player
+** "where does clojure fit into the picture now?"
+*** clojure logo off to the side, arrow into the client
+*** natural segue into alda-clj
 
 * i plan to reimplement alda using go and kotlin
 ** primary objective: decouple alda from clojure
@@ -271,14 +279,19 @@ taken to heart
 *** i was able to use clojure to quickly iterate to where alda is now, a feat
 that would have been tedious in a less concise/expressive language
 ** maybe discuss alternatives: graalvm, cljs->node
+--
 
 == alda-clj
 
-4 minutes
+TODO: screenshot of github repo
 
-* show github repo
-** basic example under Usage in README
-** cljdoc: API docs, Getting Started guide
+w/ basic example under usage in README
+
+maybe also show screenshot of cljdoc
+
+[.notes]
+--
+4 minutes
 
 * Benefits of it being a Clojure library instead of built into Alda
 ** not tied to the set of dependencies included in the alda runtime
@@ -287,6 +300,7 @@ that would have been tedious in a less concise/expressive language
 ** can leverage cljdoc to provide API docs
 ** Clojure's REPL-driven development experience unlocks my creativity
 *** Easier to experiment with Clojure code than it is from within Alda
+--
 
 == Demo: alda-clj
 
