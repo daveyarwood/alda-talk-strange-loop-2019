@@ -26,12 +26,21 @@
     :instrument  "vibraphone"
     :volume      90}])
 
+(def fallback-cities
+  [{:name "Detroit", :coordinates [32.78, -96.80]}
+   {:name "Boston", :coordinates [42.36, -71.06]}
+   {:name "Austin", :coordinates [30.27, -97.74]}
+   {:name "Indianapolis", :coordinates [39.77, -86.16]}])
+
 (defn hourly-forecast
   "Obtain the hourly forecast for a city from the National Weather Service API.
 
    Returns a seq of hourly periods, each of which is a map containing
-   information like the temperature, wind direction and wind speed."
-  [{:keys [coordinates]}]
+   information like the temperature, wind direction and wind speed.
+
+   Throws an exception if the NWS API happens to return non-200, which I've seen
+   happen, so calling code needs to handle that scenario."
+  [{:keys [coordinates] :as city}]
   (let [[x y] coordinates]
     (-> (http/get (format "https://api.weather.gov/points/%s,%s" x y))
         :body
@@ -48,10 +57,23 @@
 (def forecasts
   (atom nil))
 
+(defn collect-forecasts
+  [city]
+  (try
+    {:city city, :forecast (hourly-forecast city)}
+    (catch Throwable t
+      (let [fallback-city (merge city (rand-nth fallback-cities))]
+        (println
+          (format
+            "Failed to retrieve hourly forecast for %s, trying %s instead."
+            (:name city) (:name fallback-city)))
+        (collect-forecasts fallback-city)))))
+
 (defn collect-forecasts!
   []
-  (->> (for [city cities]
-         {:city city, :forecast (hourly-forecast city)})
+  (->> cities
+       (map collect-forecasts)
+       doall
        pr-str
        (spit forecasts-file)))
 
