@@ -50,6 +50,19 @@ a|
 
 _[insert marketing jargon here]_
 
+[.notes]
+--
+* I like this excerpt of our Senior Open Source Engineer job posting:
+** Adzerk is a world-class software platform for decision-making at scale.  Our
+ever-growing list of customers include the most innovative applications and
+publishers in the world, like Strava, Ticketmaster, Edmunds, WeTransfer, and
+imgur.
+** Great description of our product, emphasizing that we're essentially a
+decision engine.
+*** Can use the decision engine for ad serving, dynamic content selection or
+other purposes.
+--
+
 == !
 
 [.notes]
