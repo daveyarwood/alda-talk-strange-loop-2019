@@ -311,13 +311,9 @@ taken to heart
 that would have been tedious in a less concise/expressive language
 --
 
-== alda-clj
+== !
 
-TODO: screenshot of github repo
-
-w/ basic example under usage in README
-
-maybe also show screenshot of cljdoc
+image::alda-clj.png[]
 
 [.notes]
 --
