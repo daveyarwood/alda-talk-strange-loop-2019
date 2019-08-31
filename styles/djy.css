@@ -228,6 +228,10 @@ body {
   text-decoration: line-through;
 }
 
+.reveal .shift-up-30px {
+  margin-top: -30px;
+}
+
 /*********************************************
  * LINKS
  *********************************************/

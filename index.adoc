@@ -291,14 +291,11 @@ are better able to help me achieve my goals for alda
 *** maybe discuss alternatives: graalvm, cljs->node
 --
 
-TODO: go logo over client, kotlin logo over player
-
 image::phase5a.svg[]
 
 == Phase 5: Client/player
 
-TODO: clojure logo off to the side, arrow into the client
-
+[.shift-up-30px]
 image::phase5b.svg[]
 
 [.notes]
