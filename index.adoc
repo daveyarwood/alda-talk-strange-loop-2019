@@ -108,7 +108,7 @@ a|
 a GUI
 --
 
-image::snow-cone.jpg[Eskimos have many words for snow,600,600]
+image::snow_cone.jpg[Eskimos have many words for snow,600,600]
 
 == Music composition TUI
 
