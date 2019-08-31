@@ -347,14 +347,4 @@ image::alda-clj.png[]
 * Flesh out slides enough that I can practice going through the talk from start
 to finish and time it.
 * I suspect that I might be over time at this point.
-* If for whatever reason I'm under time, ideas of additional things I could
-discuss:
-** Exploration of languages/runtimes available for creating native executables
-and why I decided to go with Go.
-*** Go
-*** Rust
-*** Crystal
-*** Clojure w/ GraalVM
-*** ClojureScript targeting Node.js
-** Experience report of porting Clojure code to Go
-
+** If I am, may need to trim some things down.
