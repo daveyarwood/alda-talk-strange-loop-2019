@@ -193,13 +193,15 @@ phase 3: replace server implementation (http -> zmq REQ/REP)
 
 image::phase3.svg[]
 
-== ZeroMQ
+== !
 
-TODO: a slide or two about ZeroMQ
+.Screenshot of zeromq.org, 2017
+[caption=""]
+image::zmq_pitch.png[]
 
-* brief introduction to ZeroMQ, a couple of socket types
-* REQ/REP
-* "lazy pirate" pattern for client-side reliability
+== !
+
+image::zmq_req_rep.png[background, size=25%]
 
 == Phase 3: Client/server (ZeroMQ)
 
@@ -220,6 +222,10 @@ phase 4: add a worker process (zmq "paranoid pirate" pattern)
 --
 
 image::phase4.svg[]
+
+== !
+
+image::alda_zmq_architecture.svg[]
 
 == Phase 4: Client/server/workers
 
