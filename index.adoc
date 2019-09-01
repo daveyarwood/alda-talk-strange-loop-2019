@@ -245,9 +245,10 @@ image::alda_zmq_architecture.svg[]
 [%step]
 * Move most functionality into the client
 ** No more server/workers
-* Client should be *fast af*
-** Native executable?
+* Fast startup time / execution
+** Native executable
 * Support for live coding
+** Edit a score on the fly while it's playing
 
 == Phase 5: Client/player
 
