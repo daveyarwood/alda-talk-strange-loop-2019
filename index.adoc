@@ -264,16 +264,13 @@ playback
 * necessary to be a separate process because playback happens asynchronously
 --
 
-== OSC
+== Open Sound Control (OSC)
 
-TODO: a slide or two about OSC
-
-* general purpose
-* could be driven by something other than the alda client
-* simpler than ZeroMQ, track record of use for realtime audio applications
-* already supported by lots of things, a standard for audio programming
-
-* brief introduction to OSC
+* http://opensoundcontrol.org
+* De facto standard for multimedia communication
+* Transported over UDP
+* Simple, open-ended message structure
+** `/track/1/midi/note 2000 61 500 500 127`
 
 == Phase 5: Client/player
 
