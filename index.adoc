@@ -15,8 +15,8 @@
 --
 * Introduction
 ** 2 minutes
-** I'm here to tell a story about the relationship between two programming
-languages.
+** This is a story about the relationship between two programming languages and
+how it has evolved over time.
 *** One of them is Alda, a text-based music composition language.
 *** The other is Clojure, a functional programming-oriented Lisp that runs on
 the JVM.
