@@ -66,8 +66,9 @@ decision engine.
 other purposes.
 --
 
+* Ad serving APIs
 * Decision making at scale
-* Build your own fully custom ad server in weeks
+* Build your own innovative, server-side ad platform in weeks
 * <3 Clojure <3
 * We're hiring!
 ** https://adzerk.com/careers/[adzerk.com/careers]
