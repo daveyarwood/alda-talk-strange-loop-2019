@@ -14,7 +14,7 @@
 [.notes]
 --
 * Introduction
-** 2 minutes
+** 1 minute
 ** This is a story about the relationship between two programming languages and
 how it has evolved over time.
 *** One of them is Alda, a text-based music composition language.
@@ -29,6 +29,11 @@ image:alda_logo.png[250,250]
 image:clojure_logo.png[250,250]
 
 == !
+
+[.notes]
+--
+1 minute
+--
 
 [cols="2*"]
 |===
@@ -48,6 +53,8 @@ a|
 
 [.notes]
 --
+1 minute
+
 * I like this excerpt of our Senior Open Source Engineer job posting:
 ** Adzerk is a world-class software platform for decision-making at scale.  Our
 ever-growing list of customers include the most innovative applications and
