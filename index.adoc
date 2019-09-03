@@ -108,6 +108,8 @@ a|
 --
 * Relate the Sapir-Whorf hypothesis to the limiting aspect of composing music in
 a GUI
+* The writings of (APL originator) Kenneth Iverson and Paul Graham have explored
+similar ideas.
 --
 
 image::snow_cone.jpg[Eskimos have many words for snow,600,600]
