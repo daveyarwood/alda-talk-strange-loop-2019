@@ -130,8 +130,8 @@ a|
 
 * Just a quick survey of features
 * To learn more about Alda:
-** https://alda.io (docs, tutorial)
-** https://github.com/alda-lang/alda
+** https://alda.io[alda.io] (docs, tutorial)
+** https://github.com/alda-lang/alda[github.com/alda-lang/alda]
 ** Previous talks on YouTube
 
 [.notes]
