@@ -182,7 +182,6 @@ image::phase1.svg[]
 [.notes]
 --
 1 minute
-phase 2: break out client as java program for better CLI experience
 --
 
 image::phase2.svg[]
@@ -200,7 +199,6 @@ image::phase2.svg[]
 [.notes]
 --
 2 minutes
-phase 3: replace server implementation (http -> zmq REQ/REP)
 --
 
 image::phase3.svg[]
@@ -226,11 +224,6 @@ image::zmq_req_rep.png[background, size=25%]
 [.notes]
 --
 2 minutes
-phase 4: add a worker process (zmq "paranoid pirate" pattern)
-
-* need for server-side reliability
-* DEALER/ROUTER sockets, "paranoid pirate" pattern
-* increased complexity at this point, foisted upon the user to some extent
 --
 
 image::phase4.svg[]
@@ -256,9 +249,8 @@ image::alda_zmq_architecture.svg[]
 
 [%step]
 * Move most functionality into the client
-** No more server/workers
+* Simple, lightweight player process
 * Fast startup time / execution
-** Native executable
 * Support for live coding
 ** Edit a score on the fly while it's playing
 
@@ -269,11 +261,6 @@ image::phase5.svg[]
 [.notes]
 --
 4 minutes
-
-* performs a minimal amount of what the worker currently performs, namely
-playback
-
-* necessary to be a separate process because playback happens asynchronously
 --
 
 == Open Sound Control (OSC)
@@ -288,7 +275,9 @@ playback
 
 [.notes]
 --
-* next slide
+* Going back to our phase 5 diagram, you'll notice that I haven't included any
+Clojure or Java logos.
+* That's because I've decided to change languages.
 --
 
 image::phase5.svg[]
@@ -299,30 +288,35 @@ image::phase5.svg[]
 --
 3 minutes
 
-* i plan to reimplement alda using go and kotlin
-** primary objective: decouple alda from clojure
-** i'm also taking the opportunity to switch to languages/runtimes that i think
-are better able to help me achieve my goals for alda
-*** enumerate reasons here (refer to alda-clj "history" document)
-*** maybe discuss alternatives: graalvm, cljs->node
+* Kotlin in the player process
+** I wanted to stick with the JVM for now, as I've already figured out how to
+use the javax.sound.midi sequencer and synthesizer as a backend for Alda.
+** In the future, I may experiment with alternate backends.
+
+* Go in the client
+** Of the options I tried for languages that can produce native executables, Go
+provided the least friction when it comes to cross-compiling programs to fully
+static executables, absolutely no dynamic linking.
+** Not my favorite language in the world, but I've been pleasantly surprised.
+*** It turns out that the limitations of Go are actually its strength.
+*** You can't do anything complicated, so your code ends up not being
+complicated.
+
+* So where does Clojure fit into the picture?
 --
 
 image::phase5a.svg[]
 
 == Phase 5: Client/player
 
-[.shift-up-30px]
-image::phase5b.svg[]
-
 [.notes]
 --
 * i realized that i could still use clojure to write alda scores in a way
 that doesn't require alda to be implemented in clojure
-* micha mentioned clojure's value as a prototyping language, words i've
-taken to heart
-* i was able to use clojure to quickly iterate to where alda is now, a feat
-that would have been tedious in a less concise/expressive language
 --
+
+[.shift-up-30px]
+image::phase5b.svg[]
 
 == !
 
@@ -332,13 +326,12 @@ image::alda-clj.png[]
 --
 4 minutes
 
-* Benefits of it being a Clojure library instead of built into Alda
-** not tied to the set of dependencies included in the alda runtime
-** full control of the program, can run it wherever you like
-*** e.g. a script, a web application
-** can leverage cljdoc to provide API docs
-** Clojure's REPL-driven development experience unlocks my creativity
-*** Easier to experiment with Clojure code than it is from within Alda
+* A Clojure library that drives the Alda CLI
+* API docs via cljdoc
+* You have full control of your Clojure program
+** Can bring in Clojure libraries as dependencies
+* Clojure's REPL-driven development style unlocks creativity
+** Easier to experiment in a Clojure REPL than it is working with an Alda file
 --
 
 == Demo: alda-clj
