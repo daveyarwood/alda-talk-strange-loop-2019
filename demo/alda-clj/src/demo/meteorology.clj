@@ -6,25 +6,25 @@
 
 ;; Data source: https://public.opendatasoft.com/explore/dataset/1000-largest-us-cities-by-population-with-geographic-coordinates/table/
 (def cities
-  [{:name        "New York"
-    :coordinates [40.71 -74.00]
-    :instrument  "percussion"
-    :transpose   -36
-    :volume      85}
-   {:name        "Los Angeles"
-    :coordinates [34.05 -118.24]
-    :instrument  "upright-bass"
-    :transpose   -36
-    :volume      90}
-   {:name        "St. Louis"
-    :coordinates [38.63 -90.20]
-    :instrument  "tenor-saxophone"
-    :transpose   -18
-    :volume      80}
-   {:name        "Durham"
-    :coordinates [35.99 -78.90]
-    :instrument  "vibraphone"
-    :volume      90}])
+  [{:name         "New York"
+    :coordinates  [40.71 -74.00]
+    :instrument   "percussion"
+    :transpose    -36
+    :volume-ratio 0.85}
+   {:name         "Los Angeles"
+    :coordinates  [34.05 -118.24]
+    :instrument   "upright-bass"
+    :transpose    -36
+    :volume-ratio 0.90}
+   {:name         "St. Louis"
+    :coordinates  [38.63 -90.20]
+    :instrument   "tenor-saxophone"
+    :transpose    -18
+    :volume-ratio 0.80}
+   {:name         "Durham"
+    :coordinates  [35.99 -78.90]
+    :instrument   "vibraphone"
+    :volume-ratio 0.90}])
 
 (def fallback-cities
   [{:name "Detroit", :coordinates [32.78, -96.80]}
@@ -102,14 +102,15 @@
    The temperature (F) is used verbatim as the MIDI note number.
    The wind direction affects the panning.
    The wind speed affects the volume and note length."
-  [{:strs [temperature windDirection windSpeed]}]
+  [volume-ratio {:strs [temperature windDirection windSpeed]}]
   (let [wind-speed (->> windSpeed (re-find #"\d+") Integer/parseInt)]
     [(panning (or (wind-direction->panning windDirection)
                   (throw (ex-info "Unrecognized wind direction"
                                   {:wind-direction windDirection}))))
-     (volume (+ 35
-                (min 65
-                     (* 65 (/ wind-speed 10.0)))))
+     (volume (* volume-ratio
+                (+ 35
+                   (min 65
+                        (* 65 (/ wind-speed 10.0))))))
      (note (midi-note temperature)
            (duration (note-length (max wind-speed 0.5))))]))
 
@@ -120,11 +121,10 @@
   []
   (reset! score
           (for [{:keys [city forecast]} @forecasts
-                :let [{:keys [instrument volume transpose]} city]]
+                :let [{:keys [instrument volume-ratio transpose]} city]]
             [(part instrument)
-             (vol volume)
              (transposition (or transpose 0))
-             (map forecast-note forecast)]))
+             (map (partial forecast-note volume-ratio) forecast)]))
   (spit "/tmp/meteorology.alda" (->str @score))
   :ok)
 
