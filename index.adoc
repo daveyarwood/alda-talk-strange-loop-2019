@@ -323,7 +323,7 @@ image::alda-clj.png[]
 
 [.notes]
 --
-5 minutes
+7 minutes
 
 * Demonstrate basic usage in editor-connected REPL
 * _Meteorology_ piece
