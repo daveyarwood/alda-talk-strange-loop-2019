@@ -78,7 +78,7 @@ other purposes.
 [.notes]
 --
 * Elevator pitch for Alda
-** 1 minute
+** 5 minutes
 ** Alda is a language for writing music in a text format.
 ** The text is your source code, which can parsed and interpreted by a playback
 process, which allows you to hear the music that you're writing as you're
@@ -94,12 +94,8 @@ image::elevator.jpg[background]
 
 == Music composition GUI
 
-[.notes]
 --
-* Compare and contrast GUI vs. TUI music composition
-** 5 minutes
 --
-
 [cols="3,2"]
 |===
 | image:sibelius.jpg[screenshot of Sibelius]
@@ -110,18 +106,7 @@ a|
 * Limiting
 |===
 
-== !
-
-[.notes]
 --
-* Relate the Sapir-Whorf hypothesis to the limiting aspect of composing music in
-a GUI
-* The writings of (APL originator) Kenneth Iverson and Paul Graham have explored
-similar ideas.
---
-
-image::snow_cone.jpg[Eskimos have many words for snow,600,600]
-
 == Music composition TUI
 
 [cols="3,2"]
