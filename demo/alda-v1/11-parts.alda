@@ -1,8 +1,0 @@
-# instrument parts
-
-(quant! 95)
-violin "vn1": o4 a2 > c < b1~4
-violin "vn2": o4 d2   d   d1~4
-viola:        o3 f+2  a   g1~4
-cello:        o3 d2 < d   g1~4
-

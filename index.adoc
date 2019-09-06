@@ -121,7 +121,7 @@ a|
 
 == Demo: Alda v1
 
-* Just a quick survey of features
+* 🕒 Time is of the essence! 🕒
 * To learn more about Alda:
 ** https://alda.io[alda.io] (docs, tutorial)
 ** https://github.com/alda-lang/alda[github.com/alda-lang/alda]
@@ -129,12 +129,12 @@ a|
 
 [.notes]
 --
-* 10 minutes (maybe less now? need to time it again)
+* 5 minutes
 ** See alda files in demo/alda-v1
 ** Keep explanations short!
-** Don't necessarily even need to play every line of code.
-** Just want to quickly show what you can do with Alda and how it can achieve
-things that can't be easily expressed in standard musical notation.
+** Objectives
+*** Show some Alda code on screen and play it
+*** Explain the role of inline Clojure code
 --
 
 == !

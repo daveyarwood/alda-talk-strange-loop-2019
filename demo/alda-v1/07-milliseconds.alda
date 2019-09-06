@@ -1,8 +1,0 @@
-# duration can expressed in seconds/milliseconds
-
-# a note every 2 seconds
-midi-bass-slap: o1 e2s e e
-
-# an interesting rhythm with arbitrary durations in milliseconds
-midi-bass-slap: [ o1 e237ms g80ms a1037ms > c500ms d600ms ] *4
-
