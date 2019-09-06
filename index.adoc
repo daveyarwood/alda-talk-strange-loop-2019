@@ -344,10 +344,6 @@ image::alda-clj.png[]
 * _Meteorology_ piece
 --
 
-== take questions
-
-5 minutes
-
 == TODO
 
 * Flesh out slides enough that I can practice going through the talk from start
