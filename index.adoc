@@ -140,6 +140,11 @@ a|
 --
 The evolution of Alda's architecture
 12 minutes to get through phases 1-4
+
+This part is kind of a slog... I should probably try and speed through it as
+much as I can. Avoid going into too much detail, just cover the facts. I can
+always answer questions and go into more detail out of band. The real
+interesting bits are really at the end, when I discuss alda-clj.
 --
 
 image::blueprint.jpg[background]
