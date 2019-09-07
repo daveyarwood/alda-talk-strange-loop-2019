@@ -94,8 +94,6 @@ image::elevator.jpg[background]
 
 == Music composition GUI
 
---
---
 [cols="3,2"]
 |===
 | image:sibelius.jpg[screenshot of Sibelius]
@@ -106,7 +104,6 @@ a|
 * Limiting
 |===
 
---
 == Music composition TUI
 
 [cols="3,2"]
@@ -142,17 +139,12 @@ a|
 [.notes]
 --
 The evolution of Alda's architecture
+12 minutes to get through phases 1-4
 --
 
 image::blueprint.jpg[background]
 
 == Phase 1: Single program
-
-[.notes]
---
-1 minute
-phase 1: just a single clojure program that does everything
---
 
 image::phase1.svg[]
 
@@ -163,11 +155,6 @@ image::phase1.svg[]
 * Problem: Blocks until playback is complete
 
 == Phase 2: Client/server (HTTP)
-
-[.notes]
---
-1 minute
---
 
 image::phase2.svg[]
 
@@ -180,11 +167,6 @@ image::phase2.svg[]
 * Problem: Audio glitches when playing multiple scores
 
 == Phase 3: Client/server (ZeroMQ)
-
-[.notes]
---
-2 minutes
---
 
 image::phase3.svg[]
 
@@ -206,11 +188,6 @@ image::zmq_req_rep.png[background, size=25%]
 
 == Phase 4: Client/server/workers
 
-[.notes]
---
-2 minutes
---
-
 image::phase4.svg[]
 
 == !
@@ -229,7 +206,7 @@ image::alda_zmq_architecture.svg[]
 
 [.notes]
 --
-1 minute
+8 minutes for v2 wishlist, phase 5 and alda-clj
 --
 
 [%step]
@@ -242,11 +219,6 @@ image::alda_zmq_architecture.svg[]
 == Phase 5: Client/player
 
 image::phase5.svg[]
-
-[.notes]
---
-4 minutes
---
 
 == Open Sound Control (OSC)
 
@@ -271,8 +243,6 @@ image::phase5.svg[]
 
 [.notes]
 --
-3 minutes
-
 * Kotlin in the player process
 ** I wanted to stick with the JVM for now, as I've already figured out how to
 use the javax.sound.midi sequencer and synthesizer as a backend for Alda.
@@ -309,8 +279,6 @@ image::alda-clj.png[]
 
 [.notes]
 --
-4 minutes
-
 * A Clojure library that drives the Alda CLI
 * API docs via cljdoc
 * You have full control of your Clojure program
@@ -329,9 +297,3 @@ image::alda-clj.png[]
 * _Meteorology_ piece
 --
 
-== TODO
-
-* Flesh out slides enough that I can practice going through the talk from start
-to finish and time it.
-* I suspect that I might be over time at this point.
-** If I am, may need to trim some things down.
