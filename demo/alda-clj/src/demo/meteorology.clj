@@ -7,23 +7,23 @@
 ;; Data source: https://public.opendatasoft.com/explore/dataset/1000-largest-us-cities-by-population-with-geographic-coordinates/table/
 (def cities
   [{:name         "New York"
-    :coordinates  [40.71 -74.00]
     :instrument   "percussion"
+    :coordinates  [40.71 -74.00]
     :transpose    -36
     :volume-ratio 0.85}
    {:name         "Los Angeles"
-    :coordinates  [34.05 -118.24]
     :instrument   "upright-bass"
+    :coordinates  [34.05 -118.24]
     :transpose    -36
     :volume-ratio 0.90}
    {:name         "St. Louis"
-    :coordinates  [38.63 -90.20]
     :instrument   "tenor-saxophone"
+    :coordinates  [38.63 -90.20]
     :transpose    -18
     :volume-ratio 0.80}
    {:name         "Durham"
-    :coordinates  [35.99 -78.90]
     :instrument   "vibraphone"
+    :coordinates  [35.99 -78.90]
     :volume-ratio 0.90}])
 
 (def fallback-cities
